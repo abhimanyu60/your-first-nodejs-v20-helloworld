@@ -1,8 +1,12 @@
-import caculator from "./src/caculator.mjs";
-import * as caculatorAs from "./src/caculator.mjs";
+const express = require('express');
+const app = express();
 
-const result = caculator.add(4, 2);
-console.dir(result);
-// caculator.subtract(4, 2);
-const result2 = caculatorAs.subtract(4, 2);
-console.dir(result2);
+app.get('/', (req, res) => {
+        res.send('hello world');
+        res.end();
+}
+)
+
+app.listen(8080, () => {
+console.log('server is running')
+})
